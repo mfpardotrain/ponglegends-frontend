@@ -1,0 +1,12 @@
+.connect-container {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.player-button:hover, .connect-button:hover {
+    cursor: pointer;
+}
