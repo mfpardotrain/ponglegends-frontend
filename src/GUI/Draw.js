@@ -49,9 +49,17 @@ class Draw {
                 let ability = new Ability(middleX, middleY);
                 ability.renderQ(x, y, ctx);
             }
-            if (el.name === "w") {
+            if (el.name === "e") {
                 let ability = new Ability(0, 0);
-                ability.renderW(x, y, ctx);
+                ability.renderE(x, y, ctx);
+            } 
+            if (el.name === "1") {
+                let ability = new Ability(0, 0);
+                ability.renderE(x, y, ctx);
+            }
+            if (el.name === "3") {
+                let ability = new Ability(0, 0);
+                ability.renderE(x, y, ctx);
             }
         });
     }

@@ -14,6 +14,7 @@ class LegendSocket {
     }
 
     async sendInfo(pressedKeys) {
+        console.log(pressedKeys)
         this.socket.send(JSON.stringify(pressedKeys));
     }
 
