@@ -22,7 +22,8 @@ class Main {
         if (thisCopy.legendSocket2.connected) {
             thisCopy.legendSocket = new LegendSocket(this.link + ":8082/ws/",
                 thisCopy.fromId, thisCopy.draw);
-            thisCopy.UIElements.playerButtonOnClick(thisCopy.legendSocket)
+            thisCopy.UIElements.playerButtonOnClick(thisCopy.legendSocket);
+            thisCopy.UIElements.resetButtonOnClick(thisCopy.legendSocket);
             while (thisCopy.legendSocket.connected) {
                 await new Promise(r => setTimeout(r, 20));
                 if (thisCopy.command.command) {

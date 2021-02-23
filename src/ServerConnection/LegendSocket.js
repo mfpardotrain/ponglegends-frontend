@@ -2,6 +2,7 @@
 class LegendSocket {
 
     constructor(url, fromId, draw) {
+        this.url = url;
         this.fromId = fromId;
         this.connected = false;
         this.getSocket(url);
@@ -14,7 +15,6 @@ class LegendSocket {
     }
 
     async sendInfo(pressedKeys) {
-        console.log(pressedKeys)
         this.socket.send(JSON.stringify(pressedKeys));
     }
 
@@ -43,7 +43,6 @@ class LegendSocket {
 
     onMessage(event, thisCopy) {
         let data = JSON.parse(event.data);
-        console.log(data)
         thisCopy.draw.draw(data);
     }
 
